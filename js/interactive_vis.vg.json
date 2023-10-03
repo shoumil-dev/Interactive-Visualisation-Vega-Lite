@@ -10,24 +10,19 @@
     "params": [
         {
             "name": "Year_Max",
-            "value": 2013,
+            "value": 1900,
             "bind": {
-                "input":"field",
-                "name": "Max Year"
-            }
-        },
-        {
-            "name": "Year_Min",
-            "value": 601,
-            "bind": {
-                "input":"field",
-                "name": "Min Year"
+                "input":"range",
+                "step": 10,
+                "min": 1620,
+                "max": 2013,
+                "name": "Max Year (2013 max)"
             }
         }
     ],
     "transform": [
-        {"filter": "datum.year <= Year_Max"},
-        {"filter": "datum.year >= Year_Min"}
+        {"filter": "datum.year <= Year_Max + 10"},
+        {"filter": "datum.year >= Year_Max"}
     ],
     "mark": "circle",
     "encoding": {
