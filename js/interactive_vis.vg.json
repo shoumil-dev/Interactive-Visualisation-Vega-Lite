@@ -7,6 +7,7 @@
     "data": {
         "url": "https://raw.githubusercontent.com/shoumil-dev/Interactive-Visualisation-Vega-Lite/main/data/meteorite_landings_prod.csv"
     },
+    
     "params": [
         {
             "name": "Year_Max",
@@ -24,7 +25,13 @@
         {"filter": "datum.year <= Year_Max + 10"},
         {"filter": "datum.year >= Year_Max"}
     ],
-    "mark": "circle",
+    "mark": {
+        "type": "circle",
+        "tooltip": true,
+        "size": 100,
+        "stroke": "black",
+        "strokeWidth": 2
+    },
     "encoding": {
         "x": {
             "field": "year",
@@ -35,7 +42,10 @@
         "y": {
             "field": "mass",
             "type": "quantitative",
-            "title": "Mass"
+            "title": "Mass (kg)",
+            "scale": {
+                "type": "log"
+            }
         },
 
         "tooltip": [
