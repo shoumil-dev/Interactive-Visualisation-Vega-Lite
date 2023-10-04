@@ -11,14 +11,23 @@
 
 
 </head>
-<body>
+<br>
   
 <div id="interactive_vis"></div>
+<div id="meteorite-landings_map"></div>
 
 <script type="text/javascript">
 
   var spec2 = "js/interactive_vis.vg.json";
   vegaEmbed('#interactive_vis', spec2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+</script>
+
+<script type="text/javascript">
+
+  var spec3 = "js/meteorite-landings_map.vg.json";
+  vegaEmbed('#meteorite-landings_map', spec3).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
