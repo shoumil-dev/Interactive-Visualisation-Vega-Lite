@@ -44,7 +44,7 @@
             "type": "quantitative",
             "title": "Mass (kg)",
             "scale": {
-                "type": "log"
+                "type": "symlog"
             }
         },
 
@@ -53,7 +53,7 @@
             {"field": "year", "type": "quantitative", "format": ""},
             {"field": "recclass", "type": "nominal", "format": "", "title": "classification"},
             {"field": "fall", "type": "nominal", "format": ""},
-            {"field": "mass", "type": "quantitative", "format": ","},
+            {"field": "mass", "type": "quantitative", "format": ",", "title": "mass (kg)"},
             {"field": "location", "type": "nominal", "format": ""},
             {"field": "location_type", "type": "nominal", "format": "", "title": "location type"},
             {"field": "lat_lng", "type": "nominal", "format": "", "title": "latitude longitude"}
