@@ -17,7 +17,7 @@
                 "step": 10,
                 "min": 1620,
                 "max": 2013,
-                "name": "Max Year (2013 max)"
+                "name": "Year-Decade"
             }
         }
     ],
